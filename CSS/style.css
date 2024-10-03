@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.container {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.line {
+    position: absolute;
+    background-color: red;
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+.horizontal {
+    width: 100%;
+    height: 10px; /* Espessura da linha */
+}
+
+.vertical {
+    width: 10px; /* Espessura da linha */
+    height: 100%;
+}
+
+.diagonal-left {
+    width: 10px;
+    height: 10px; /* Espessura da linha */
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.diagonal-right {
+    width: 10px;
+    height: 10px; /* Espessura da linha */
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+
+footer {
+    margin-top: 20px;
+    color: white;
+    font-size: 0.9em;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
